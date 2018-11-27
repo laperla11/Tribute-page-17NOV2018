@@ -1,0 +1,307 @@
+section, article, aside, footer, header, nav {
+	display: block;
+}
+
+html {
+	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family:"Raleway", sans-serif;
+	line-height: 1.8rem;
+
+}
+
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+  margin-bottom:5px;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.column{
+width:45%;
+padding:20px;
+text-align:justify;
+max-height:750px;
+overflow:auto;
+  /*background-color:gray;*/
+}
+
+.image-container{
+  overflow:hidden;}
+
+.image-container img{
+  width:100%;
+}
+
+.menu {
+	padding:0px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border:1px solid black;
+  position : fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+}
+
+.btn-open{
+  display:none;
+  position : absolute;
+  top: 5px;
+  right:15px;
+}
+
+.btn-open span{
+  display: inline-block; 
+  width: 30px;
+  height:3px;
+  background-color: white;
+  margin-bottom: 5px; 
+}
+
+.navigation-bar li:first-child {
+  width:180px;
+}
+
+.navigation-bar li img{
+  width:100%;
+}
+
+.navigation-bar {
+  margin:0;
+  padding:5px 0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: center;
+  list-style-type: none;
+}  
+
+.navigation-bar a {
+  color:white;
+  min-width:120px;
+  height:30px;
+  line-height:30px;
+  text-decoration:none;
+  text-align:center;
+  /*background-color:green;*/
+  display:block;
+  margin-bottom:1px;
+  margin-right:1px;
+}
+
+.navigation-bar a:hover {
+color:blue;  
+}
+
+@media screen and (max-width:900px){
+.navigation-bar a{
+  display:none;
+}
+.btn-open {
+  display: block;
+}
+}
+
+.navigation-bar.responsive {
+  flex-direction:column;
+}
+
+.navigation-bar.responsive a {
+  color:white;
+  min-width:150px;
+  height:35px;
+  line-height:35px;
+  text-decoration:none;
+  text-align:center;
+  /*background-color:green;*/
+  display:block;
+  margin-bottom:1px;
+  margin-right:1px;
+}
+
+/*hamburger menu*/
+.navigation-bar.responsive a:hover {
+color:blue;  
+}
+
+.btn-open.close .first-line span:first-child{
+  transform:rotate(45deg);
+  position:relative;
+  right: -7px;
+ }
+
+
+.btn-open.close .first-line span:last-child{
+   transform:rotate(-45deg);
+
+ }
+ 
+.btn-open.close .last-line span:first-child{
+  transform:rotate(-45deg);
+  position:relative;
+  right: -7px;
+  top:-7px;
+
+  }
+.btn-open.close .last-line span:last-child{
+  transform:rotate(45deg);
+  position:relative;
+  top:-7px;
+ }
+
+
+.btn-open.close .mid-line span{
+  display:none;
+}
+
+.title {
+  height: 30rem;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/db/Mustafa_Kemal_Atat%C3%BCrk%282%29.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  align-content:flex-end;
+  justify-content: flex-end;
+  margin-top:100px;
+}
+
+h1 {
+font-size: 3.5rem;
+margin-left: 2%;
+line-height:3.5rem;
+}
+
+
+.title p{
+  font-size: 3rem;
+  line-height: 3rem; 
+  margin-left: 2%;
+}
+
+@media screen and (max-width:700px){
+  h1 {
+    font-size: 2.2rem;
+    line-height:2.2rem;
+}
+
+.title p{
+  font-size: 1.5rem;
+  line-height: 1.5rem; 
+}
+}
+
+#overview{
+	background-color: rgb(230,230,255);
+}
+
+#quote{
+	width:80%;
+  margin:0 auto; 
+	text-align: center;
+	font-style:italic;
+	line-height: 1rem;
+	padding:1rem 2rem;
+	background-color:rgb(255,179,179);
+	border-radius: 10px;
+}
+
+@media screen and (max-width:700px){
+  #quote {
+  width:90%;
+  margin:0 auto;
+   
+}
+}
+
+
+#early-years{
+	background-color: rgb(230,255,230);
+}
+
+#power{
+	background-color: rgb(179,179,255);
+}
+
+#president{
+	background-color: rgb(179,255,179);
+}
+
+#after{
+	background-color: rgb(128,128,255);
+}
+
+
+footer {
+	padding-top:16px;
+	min-height: 10rem;
+	background-color:rgb(128,255,128);
+	width:100%;
+	text-align:center;
+	font-size: 1.2rem;
+ }
+
+.external-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: center;
+  list-style-type: none;
+ 
+}  
+
+.external-links a {
+  color:#00008b;
+  width:200px;
+  height:60px;
+  line-height:60px;
+  text-decoration:none;
+  text-align:center;
+  list-style-type: none;
+  display:block;
+}
+  
+.external-links a:hover {
+color:green;  
+}
+  
+.external-links li {
+	border-right:1px solid black;}
+
+.external-links li:last-child {
+	border-right:0;
+}
+
+@media screen and (max-width:900px){
+  .external-links, .row {
+  flex-direction:column;
+     }
+  
+  .navigation-bar li {
+    border-bottom:1px solid black;
+    }
+
+  .navigation-bar li:first-child {
+    border-bottom: 0;
+    }
+    
+  .navigation-bar li:last-child {
+     border-bottom:0;
+}
+   
+  .external-links li {
+    border-right:0;
+}
+    
+  .column {
+    width:100%;
+}
+}
+  
